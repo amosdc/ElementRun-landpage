@@ -3,10 +3,15 @@
 *{  
   margin:0;   
   padding: 0;
+  scroll-behavior: smooth;
  }  
 body{
   height: 300vh;
   font-family: 'Poppins', sans-serif;
+}
+
+a{
+  text-decoration: none;
 }
  .title{  
   cursor:pointer;  
@@ -26,6 +31,20 @@ body{
  .navbar div, ul li{
   color: gray;
   
+ }
+
+ .navbar .download-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  background-color: rgb(19, 110, 248);
+ }
+
+ .navbar .download-btn a{
+  color: white;
  }
 
  .content-navbar{
@@ -96,7 +115,7 @@ section.hero{
 section.hero .container{
   height: 100vh ;
   width: 100%;
-  background: #111 ;
+  background: #111111 ;
   display: flex;
   align-items: center;
 
@@ -181,27 +200,55 @@ section.hero  .col-img img{
 .pembatas{
   height: 30vh;
   background-color: #111;
+  
+  
 }
 
+.pembatas1{
+  width: 99%;
+  height: 50%;
+  background-color: #111;
+  transform: rotate(-5deg);
+}
 
+.pembatas2{
+  position:relative;
+  z-index: inherit;
+  height: 82%;
+  width: 99.5%;
+  background-color: #222831;
+  transform: rotate(5deg);
+  
+}
 
 /* ABOUT */
 section.about{
-  background-color: #1E1E1E;
+  background-color: #222831;
 }
 
 section.about div.container{
-  height: 50vh;
-  padding: 3% 0 15% ; 
+  height: 60vh;
+  padding: 3% 0 7% ; 
+  margin: 0 10% 0 0;
   text-align: center;
   color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-section.about .text h1{
-  font-size: 50px;
+section.about .container .gambar img{
+  width: 75%;
+}
+
+section.about .text{
+  text-align: start;
+  font-weight: 200;
+}
+
+
+
+section.about .text p{
+  margin: 20px 0;
 }
 
 section.about .btn{
@@ -209,10 +256,10 @@ section.about .btn{
   align-items: center;
   justify-content: center;
   width: 120px;
-  height: 30px;
+  height: 40px;
   border-radius: 20px;
   background-color: #136EF8;
-  margin: 5% auto;
+  margin: 5% 0;
 }
 
 section.about .btn a{
@@ -222,50 +269,99 @@ section.about .btn a{
 }
 
 .about-bawah{
-  height: 30vh;
+  margin: -5% 0 0 0 ;
   width: 100%;
-  background-color: white;
+  background-color: #11151b;
   position: relative;
-  margin: -100px 0 0 0 ;
-  border-radius: 120px 120px 0 0;
-  --smooth-corners: 4;
 }
 
-section.about .about-bawah .row{
+section.about .about-bawah .about-bg{
+  height: 65%;
+  width: 100%;
+  background-image: url('drive-download-20230816T014010Z-001/aboutbg.png');
+  background-position: 60% 40% ;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  border-radius: 0 0 100px 100px;
+  overflow: hidden;
 
+}
+
+section.about .about-bawah .about-bg h2{
+  font-size: 50px;
+  font-weight: 900 !important;
+  line-height: 80px;
+  margin: 7% 0 0 0 ;
+  color: white;
+  z-index: 1;
+}
+
+section.about .about-bawah .about-bg::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 65%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+  position: absolute;
+  
+
+}
+
+section.about .about-bawah .col{
+  background-color: #222831;
+  border-radius: 30px;
+  color: white;
+  z-index: 1;
 }
 
 section.about .about-bawah .img{
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
 }
 
-section.about .about-bawah .img img{
-  width: 100px;
-  margin-top: -20%;
+.img.satu{
+  background-color: #DA0C81;
+}
+.img.dua{
+  background-color:#5272F2;
+}
+.img.tiga{
+  background-color: #113946;
 }
 
 section.about .about-bawah .text{
-  margin: 20px 0;
-  width: 300px;
-  text-align: center;
+  text-align: start;
 }
+
+section.about .about-bawah .text h2{
+  font-size: 30px ;
+}
+
 
 
 
 /* CHARACTER */
 section.character{
-  margin: 12% 0 0 0;
+  margin: 0 0 2% 0;
+}
+
+section.character .con-header{
+  background-color: #11151b;
 }
 
 section.character .header{
+  padding: 5% 0 0 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  background-color: white;
+  border-radius:  100px 100px 0 0;
 }
 
 section.character .header h1{
@@ -291,24 +387,21 @@ section.character .header .btn a{
 }
 
 section.character .container{
-  width: 80%;
+  width: 100%;
   height: fit-content;
-  margin: 50px auto 0;
 }
 
 section.character .container .row{
   display: flex;
-
   align-content: flex-start;
-  flex-wrap: wrap;
   justify-content: center;
-
+  
 }
 
 
 section.character .container .card{
-  height: 330px;
-  width: 250px;
+  height: 300px;
+  width: 220px;
   border-radius: 30px;
   margin: 50px 20px;
   transition: 0.2s;
@@ -325,8 +418,8 @@ section.character .container .card .img{
 }
 
 section.character .container .card img{
-  width: 150px;
-  margin: -42px 0 0 0;
+  width: 130px;
+  margin: -20% 0 0 0;
 }
 
 section.character .container .card .text{
@@ -386,34 +479,85 @@ section.character .container .col .card.lima{
 }
 
 
-/* Bawah */
-section.image{
-  height: 70vh;
-  background-color: #101010;
+
+/* Download */
+section.download{
+  height: 80vh;
+  background-color: #11151b;
 }
 
-section.image .container{
-  height: inherit;
-  display: flex;
-  align-items: center;
-
+section.download .wrap{
+  height: 100%;
+ 
+  border-radius: 0 0 100px 100px;
+  background: url('drive-download-20230816T014010Z-001/mockup-pc.png'), #11151b ;
+  background-size: 70%;
+  background-position: 80% 50%;
+  background-repeat: no-repeat;
 }
 
-section.image .container .row{
-  width: 100%;
-  transform: rotate(20deg);
+section.download .row{
+  margin:  10%;
+  color: white;
+}
+
+section.download .row h1{
+  font-size: 39px;
+}
+
+section.download .btn-row{
   display: flex;
   flex-direction: row;
+}
+
+section.download .btn{
+  display: flex;
   justify-content: center;
-  background-color: ;
-
-}
-
-section.image img{
-  width: 100px;
-}
-
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  margin: 10% 10% 0 0;
+  border-radius: 35px;
  
+}
+section.download a{
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Footer */
+footer{
+  background-color: #11151b;
+}
+
+footer .wrapper{
+    padding: 5% 10%;
+    display: flex;
+  
+
+}
+
+footer .col{
+  color: white;
+  margin: 2% 10% 0 0;
+
+}
+
+footer a{
+  color: white;
+}
+
+footer ul{
+  margin: 20px 0;
+  list-style-type: none;
+}
+
+footer li{
+  font-size: 14px;
+  margin: 15px 0;
+}
 
 
  @media only screen and (min-width:768px){
@@ -427,21 +571,92 @@ section.image img{
   nav.sticky div, nav.sticky ul li{
     color: white;
   }
+
+
+
+
+  section.about .text h2{
+    font-size: 40px;
+  }
+
+  section.about .container .gambar{
+    width: 50%;
+  }
+
+  .about-bawah{
+
+    height: 100vh;
+  }
+
+  section.about .about-bawah .text p{
+    margin: 5% 0  ;
+  }
+  
+  section.about .about-bawah .img{
+    margin: -20% 0 0 15%;
+  }
+
+  section.about .about-bawah .text{
+    margin: 5% 15% 7%;
+  }
+
+  section.about .about-bawah .col{
+    width: 20%;
+    height: 220px;
+    padding: 1%;
+  margin: 0 1.5%;
+  }
+
+  section.about .about-bawah .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: -7% 0 0 0 ;
+  
+  }
+
+  /* Download */
+  section.download .wrap{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
  }
+
+
+
  @media only screen and (max-width:768px){  
  
+ nav.navbar{
+  z-index: 999;
+ }
+
+  .sticky{
+  background-color: white;
+ }
+
+ .sticky .title{
+  color: black;
+ }
+
  .nav-sub{  
    position: fixed;   
    top:65px;  
    right:0px;  
    flex-direction:column;  
-   background-color:rgb(0,0,0,0.75);  
+   background-color: #22283194;  
    border-radius:0px 0px 0px 20px;  
    transition:transform 0.3s ease-in;  
    transform:translate(100%);  
    height: 100vh;
    width: 50%;
+
   }  
+
+  .nav-change .list-item .nav-link{
+    color: white;
+  }
   .list-item{
     margin: 0 auto  ;
   }
@@ -451,7 +666,9 @@ section.image img{
    }
 
  .nav-change{  
+  z-index: 999;
    transform:translate(0%);  
+   
     
   }  
  .ham{  
@@ -469,15 +686,167 @@ section.image img{
  }  
 
  .download-btn{
-  display: none;
+  display: none !important;
   order: 2;  
  }
+ 
 
 
+ /* HERO */
 
+ section.hero .container{
+  justify-content: center !important;
 
- section.about .about-bawah .row{
-  display: grid;
+}
+section.hero .col{
+  width:100% !important;
+  margin: 0 50px !important;
+}
+
+ section.hero .col-img .background{
+  display: none;
  }
 
- }  
+ section.hero .col-img img{
+  width: 0;
+  height: 0;
+  animation: none;
+ }
+
+
+
+/* PEMBATAS */
+.pembatas{
+  display: none;
+}
+
+
+/* ABOUT */
+
+section.about .container{
+  flex-direction: column-reverse;
+  height: fit-content !important;
+}
+
+section.about .content .text h2{
+  margin-top: 20px;
+  font-size: 30px !important;
+}
+
+section.about .gambar img{
+  width: 300px !important;
+}
+
+.about-bawah .about-bg{
+  background-position: 53% 20% !important;
+  height: 60vh !important;
+}
+
+.about-bawah h2{
+  margin: 70px 70px 0 70px  !important;
+  font-size: 40px !important;
+}
+
+.about-bawah .row{
+  display:flex;
+  flex-direction: column;
+  margin: -70px 0 0 !important;
+
+}
+
+.about-bawah .row .col{
+  height: 200px;
+  margin: 10px auto;
+  width: 70% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  z-index: 1;
+
+}
+
+.about-bawah .row .col .img{
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 20px 0 -30px !important;
+}
+
+.about-bawah .col .text{
+  width: 80%;
+  display: flex;
+  margin: -30px 0 0 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-bawah .row .col h2{
+  font-size: 20px !important;
+}
+
+
+/* CHARACTER */
+
+
+section.character .container .row{
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+section.character .container .col{
+  margin: 10px 0;
+}
+
+section.character .container .card{
+  height: 80%;
+  padding: 5px 0;
+  width: 80%;
+}
+
+section.character .container .card img{
+  width: 70%;
+
+}
+
+section.character .container .card .text{
+  margin: 10% 5% 0 10% ;
+}
+
+
+/* Download */
+section.download {
+  
+  height: 90vh;
+}
+section.download .wrap {
+  background: url('drive-download-20230816T014010Z-001/mockup-hp.png'), #11151b ;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 70% 150%;
+}
+
+section.download .wrap .row{
+  margin: 0 10px !important;
+}
+
+section.download .row h1{
+  margin: 30px 0 !important;
+  font-size: 35px !important;
+}
+
+section.download .btn{
+  width: 150px;
+  height: 50px;
+  margin: 20px 10% 0 0;
+  border-radius: 35px;
+ 
+}
+
+/* Footer */
+ footer .wrapper{
+  padding: 0 0 15% 10%;
+
+  display: grid;
+
+ } 
+
+}
