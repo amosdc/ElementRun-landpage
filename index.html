@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Element Run's</title>
-    <link rel="icon" type="image/x-icon" href="drive-download-20230816T014010Z-001/solar-gede.png">
+    <link rel="icon" type="image/x-icon" href="drive-download-20230816T014010Z-001/solar.png">
     <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="navbar">  
-        <div class="title">CWR</div>  
+        <div class="title">ElementRun</div>  
         <div class="ham" >  
         <span class="bar1"></span>  
         <span class="bar2"></span>  
@@ -17,18 +19,15 @@
         </div>  
         
         <div class="list-item-navbar">
-            <ul class="nav-sub">  
-
-                <li class="list-item"><a href="#" class="nav-link">Home</a></li>  
-                <li class="list-item"><a href="#" class="nav-link">Blogs</a></li>  
-                <li class="list-item"><a href="#" class="nav-link">About me</a></li>  
-                <li class="list-item none"><a href="" class="nav-link"> <button>Download</button></a></li>
+            <ul class="nav-sub">    
+                <li class="list-item none"><a href="#char" class="nav-link">Character</a></li>  
+                <li class="list-item none"><a href="#download" class="nav-link"> <button>Download</button></a></li>
             </ul>  
         </div>
 
         <div class="download-btn">
-            <a href="">
-                <button>Download</button>
+            <a href="" onclick="download()">
+                Download
             </a>
         </div>
         
@@ -56,15 +55,21 @@
         </div>
        </section>
 
-       <div class="pembatas">
-
-       </div>
+       <section class="pembatas">
+           <div class="pembatas1"></div>
+           
+           <div class="pembatas2"></div>
+       </section>
 
        <section class="about">
         <div class="container">
+            <div class="gambar">
+                <img src="drive-download-20230816T014010Z-001/merekalari.png" alt="">
+            </div>
             <div class="content">
                 <div class="text">
-                    <h1>Element Run. <br>Unique 2D Game</h1>
+                    <h2>Element Run. <br>Unique 2D Game</h2>
+                    <p>towards a new adventure</p>
                 </div>
                 <div class="btn">
                     <a href="">Download</a>
@@ -74,10 +79,13 @@
         </div>
         
         <div class="about-bawah">
+            <div class="about-bg">
+                <h2>We're different because . .</h2>
+            </div>
             <div class="row">
                 <div class="col">
-                    <div class="img">
-                        <img src="" alt="waiting asset">
+                    <div class="img satu">
+                        <i class="fa-regular fa-copyright fa-2xl"></i>
                     </div>
                     <div class="text">
                         <h2>Original</h2>
@@ -85,17 +93,17 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="img">
-                        <img src="" alt="watiting asset">
+                    <div class="img dua">
+                        <i class="fa-solid fa-thumbs-up fa-2xl"></i>
                     </div>
                     <div class="text">
-                        <h2>Good Story</h2>
-                        <p>our games are made with our writer wrote the best story specially for the development of this game!</p>
+                        <h2>Good Story</h2> 
+                        <p>our writer wrote the best story specially for this game!</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="img">
-                        <img src="" alt="waiting asset">
+                    <div class="img tiga">
+                        <i class="fa-solid fa-gamepad fa-2xl"></i>
                     </div>
                     <div class="text">
                         <h2>First Project</h2>
@@ -107,23 +115,22 @@
        
        </section>
 
-       <section class="">
+    
 
-
-       </section>
-
-       <section class="character">
-        <div class="header">
-            <div class="row">
-                <div class="h1">
-                    <h1>characters</h1>
-                </div>
-                <div class="btn">
-                    <a href="">Details</a>
+       <section class="character " id="char">
+            <div class="con-header">
+                <div class="header">
+                    <div class="row">
+                        <div class="h1">
+                            <h1>characters</h1>
+                        </div>
+                        <div class="btn">
+                            <a href="">Details</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-        </div>
+        
         <div class="container">
             <div class="row">
 
@@ -211,23 +218,40 @@
        </section>
        
 
-       <section class="image">
-        <div class="container">
+       <section class="download" id="download">
+        <div class="wrap">
             <div class="row">
-                <div class="col">
-                    <img src="drive-download-20230816T014010Z-001/daon.png" alt="">
+               <h1>Good to Go? <br> Download <br> Element Run today!</h1>
+               <div class="btn-row">
+                <div class="btn play">
+                    <a href=""><i class='fab fa-google-play'></i> Play store</a>
                 </div>
-
-            </div>
+                <div class="btn apple">
+                    <a href=""><i class="fa fa-apple"></i> App store</a>
+                </div>
+               </div>
+            </div> 
         </div>
        </section>
 
-      
+       <footer>
+        <div class="wrapper">
+            <div class="col">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="">@elementrun_dev</a></li>
+                    <li><a href="">@mosdccc</a></li>
+                    <li><a href="">+62 8898 7765 2265</a></li>
+                </ul>
+            </div>
 
+
+        </div>
+       </footer>
 
        
 
-
+       <script src="https://kit.fontawesome.com/ad2968a80b.js" crossorigin="anonymous"></script>
        <script src="script.js"></script>
 </body>
 </html>
